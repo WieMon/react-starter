@@ -48,8 +48,8 @@ class List extends React.Component {
           {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-          {this.state.columns.map(({key, ...columnProps}) => (
-            <Column key={key} {...columnProps} />
+          {this.state.columns.map(({key, icon, ...columnProps}) => (
+            <Column key={key} key={icon} {...columnProps} />
           ))}
         </div>
         <div className={styles.creator}>

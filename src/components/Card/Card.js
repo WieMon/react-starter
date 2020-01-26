@@ -1,24 +1,16 @@
 import React from 'react';
 import styles from './Card.scss';
-import {settings} from '../../data/dataStore';
 import PropTypes from 'prop-types';
 
-class Card extends React.Component {
+const Card = props => (
 
-  static propTypes = {
-    title: PropTypes.node.isRequired,
-    children: PropTypes.node,
-  }
-
-  render() {
-    return (
       <section className={styles.component}>
-        <h3>{this.props.title}</h3>
+        <h3>{props.title}</h3>
       </section>
-    )
-  }
-  
-}
+);
 
+Card.propTypes = {
+  title: PropTypes.node,
+}
 
 export default Card;

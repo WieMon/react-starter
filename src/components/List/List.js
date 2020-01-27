@@ -45,7 +45,7 @@ class List extends React.Component {
       <section className={styles.component}>
         <Hero titleText={this.props.title} imageText={this.props.image} imageAlt={this.props.alt}/>
         <div className={styles.description}>
-          {ReactHtmlParser(this.props.description)}
+          {ReactHtmlParser(this.props.de,scription)}
         </div>
         <div className={styles.columns}>
           {this.state.columns.map(({key, icon, ...columnProps}) => (

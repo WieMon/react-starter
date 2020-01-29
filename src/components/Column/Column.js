@@ -13,7 +13,7 @@ class Column extends React.Component {
 
   static propTypes = {
     title: PropTypes.node,
-    cards: PropTypes.node,
+    cards: PropTypes.array,
   }
 
   addCard(title){
@@ -29,9 +29,10 @@ class Column extends React.Component {
       }
     ));
   }
-
+  
   render() {
     return (
+      
       <section className={styles.component}>
         <h3 className={styles.title}>
           <span className={styles.icon}>

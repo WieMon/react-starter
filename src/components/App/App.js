@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './App.scss';
 import PropTypes from 'prop-types';
-import List from '../List/List.js';
+import List from '../List/ListContainer.js';
 //import {pageContents, listData} from '../../data/dataStore';
 
 class App extends React.Component {
@@ -13,6 +13,7 @@ class App extends React.Component {
 
   render() {
     const {title, subtitle, lists} = this.props;
+    
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>

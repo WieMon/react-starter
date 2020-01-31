@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './Card.scss';
 import PropTypes from 'prop-types';
 
-const Card = props => (
 
+const Card = props => ( //error przy destrukturyzacji (zamianie props na title)
+  
+  
   <section className={styles.component}>
     <h3>{props.title}</h3>
   </section>

@@ -28,7 +28,7 @@ class List extends React.Component {
     return (
       <section className={styles.component}>
         <Hero titleText={title} imageText={image} imageAlt={alt}/>
-        <div className={description}>
+        <div className={styles.description}>
           {ReactHtmlParser(description)}
         </div>
         <div className={styles.columns}>

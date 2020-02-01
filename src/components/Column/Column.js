@@ -15,12 +15,12 @@ class Column extends React.Component {
   }
 
   render() {
-    const {title, icon, cards} = this.props;
+    const {icon, cards} = this.props;
 
     return (
       
       <section className={styles.component}>
-        <h3 className={title}>
+        <h3 className={styles.title}>
           <span className={styles.icon}>
             <Icon name={icon} />
           </span>

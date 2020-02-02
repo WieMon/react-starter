@@ -3,7 +3,7 @@ import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card.js';
 import Icon from '../Icon/Icon.js';
-//import Creator from '../Creator/Creator.js';
+import Creator from '../Creator/Creator.js';
 import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
@@ -12,6 +12,7 @@ class Column extends React.Component {
     title: PropTypes.node,
     cards: PropTypes.array,
     icon: PropTypes.node,
+    addCard: PropTypes.func,
   }
 
   static defaultProps = { //dodać to tutaj osobno czy zamienić icon powyżej?
@@ -19,7 +20,7 @@ class Column extends React.Component {
   }
 
   render() {
-    const {icon, cards} = this.props;
+    const {icon, cards, addCard} = this.props;
 
     return (
       
@@ -37,11 +38,11 @@ class Column extends React.Component {
 
           
         </div>
-        {/*
+        
         <div className={styles.creator}>
-          <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
+          <Creator text={settings.cardCreatorText} action={addCard}/>
         </div>
-          */}
+          
       </section>
      
     );

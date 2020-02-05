@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "lint": "eslint src/",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "server": "http-server dist"
   },
   "husky": {
     "hooks": {
@@ -26,7 +27,8 @@
     "react-html-parser": "^2.0.2",
     "react-redux": "^7.0.1",
     "redux": "^4.0.1",
-    "shortid": "^2.2.15"
+    "shortid": "^2.2.15",
+    "http-server": "^0.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

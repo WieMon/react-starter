@@ -47,13 +47,13 @@ class Search extends React.Component {
     return (
       <div className={styles.component}>
         <Container>
-          <input
-            type='text'
-            placeholder={text}
-            value={value}
-            onChange={event => this.handleChange(event)}
-          />
           <div className={styles.buttons}>
+            <input
+              type='text'
+              placeholder={text}
+              value={value}
+              onChange={event => this.handleChange(event)}
+            />
             <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
           </div>
           <div>

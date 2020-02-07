@@ -26,7 +26,7 @@ class List extends React.Component {
 
   render() {
     const {title, image, alt, description, columns, addColumn} = this.props;
-
+    console.log('List.title', title);
     return (
       <section className={styles.component}>
         <Container>

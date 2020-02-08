@@ -12,6 +12,24 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  FAQ: {
+    title: 'FAQ',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    alt: 'spaceship',
+    question1: '1. Question',
+    answer1:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    question2: '2. Question',
+    answer2:  'Etiam tincidunt posuere ante, et porta turpis faucibus non.',
+    question3: '3. Question',
+    answer3:  'Mauris volutpat pharetra sem et consequat. Donec vitae sapien odio.',
+  },
+  info: {
+    title: 'Information',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    alt: 'spaceship',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+
 };
 
 export const pageContents = {

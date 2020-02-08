@@ -1,10 +1,11 @@
 import React from 'react';
 import Container from '../Container/Container';
-import Hero from '../Hero/Hero';
-import {settings} from '../../data/dataStore';
+import Hero from '../Hero/Hero.js';
 import PropTypes from 'prop-types';
+import { settings } from '../../data/dataStore';
+import styles from './FAQ.scss';
 
-class FAQ extends React.Component {
+{/*class FAQ extends React.Component {
 
   static propTypes = {
     title: PropTypes.node.isRequired,
@@ -34,21 +35,32 @@ class FAQ extends React.Component {
       </Container>
     );
   }
-}
+}*/}
 
-{/*const FAQ = props => (
-    <Container>
-        <Hero titleText={title} imageText={image} imageAlt={alt}/>
-        <h2>1. FAQ</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <h2>1. FAQ</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <h2>1. FAQ</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <h2>1. FAQ</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </Container>
-);*/}
+const FAQ = ({title, image, alt}) => (
+  <Container >
+    <Hero titleText={title} imageText={image} imageAlt={alt}/>
+    <div className={styles.wrapper}>
+      <h2>{settings.FAQ.question1}</h2>
+      <p>{settings.FAQ.answer1}</p>
+      <h2>{settings.FAQ.question2}</h2>
+      <p>{settings.FAQ.answer2}</p>
+      <h2>{settings.FAQ.question3}</h2>
+      <p>{settings.FAQ.answer3}</p>
+    </div>
+  </Container>
+);
 
+FAQ.propTypes = {
+  title: PropTypes.node.isRequired,
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.node,
+};
+
+FAQ.defaultProps = {
+  title: settings.FAQ.title,
+  image: settings.FAQ.image,
+  alt: settings.FAQ.alt,
+};
 
 export default FAQ;

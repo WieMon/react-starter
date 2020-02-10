@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../Container/Container';
 import Hero from '../Hero/Hero.js';
-import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import styles from './FAQ.scss';
 
@@ -37,9 +36,9 @@ import styles from './FAQ.scss';
   }
 }*/}
 
-const FAQ = ({title, image, alt}) => (
+const FAQ = () => (
   <Container >
-    <Hero titleText={title} imageText={image} imageAlt={alt}/>
+    <Hero titleText={settings.FAQ.title} imageText={settings.FAQ.image} imageAlt={settings.FAQ.alt}/>
     <div className={styles.wrapper}>
       <h2>{settings.FAQ.question1}</h2>
       <p>{settings.FAQ.answer1}</p>
@@ -50,12 +49,6 @@ const FAQ = ({title, image, alt}) => (
     </div>
   </Container>
 );
-
-FAQ.propTypes = {
-  title: PropTypes.node.isRequired,
-  image: PropTypes.string.isRequired,
-  alt: PropTypes.node,
-};
 
 FAQ.defaultProps = {
   title: settings.FAQ.title,

@@ -1,7 +1,12 @@
 import shortid from 'shortid';
 
 // selectors
-export const getCardsForColumn = ({cards, searchString}, columnId) => cards.filter(card => card.columnId == columnId  && new RegExp(searchString, 'i').test(card.title));
+export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
+export const searchCardsForColumn = ({cards,columns, lists}, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).map(card => ({
+  ...card,
+  columnName: columns.find(col => col.id === card.columnId).title,
+  listName: lists.find(list =>list.id === columns.find(col => col.id === card.columnId).listId).title, 
+})); 
 
 // action name creator
 const reducerName = 'cards';

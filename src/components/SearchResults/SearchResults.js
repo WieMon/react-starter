@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {settings} from '../../data/dataStore';
 import Container from '../Container/Container';
 import Card from '../Card/Card.js';
-
+import styles from './SearchResults.scss';
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -19,9 +19,9 @@ class SearchResults extends React.Component {
 
     return (
       <Container>
-        <section>
+        <section className={styles.wrapper}>
           <div>
-            <h2>Card</h2>
+            <h2>Cards</h2>
             {cards.map(cardData => (
               <Card key={cardData.id} {...cardData} />
             ))}
